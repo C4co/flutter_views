@@ -35,7 +35,9 @@ class _AuthPageState extends State<AuthPage> {
       return Scaffold(
         appBar: AppBar(),
         body: const Center(
-          child: CircularProgressIndicator(),
+          child: CircularProgressIndicator(
+            strokeWidth: 2,
+          ),
         ),
       );
     }
