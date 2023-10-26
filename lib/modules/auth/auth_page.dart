@@ -12,12 +12,18 @@ class AuthPage extends StatefulWidget {
 }
 
 class _AuthPageState extends State<AuthPage> {
-  bool isLoading = false;
+  bool isLoading = true;
 
   @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       themeGlobal.setTheme('authTheme');
+    });
+
+    Future.delayed(const Duration(milliseconds: 600), () {
+      setState(() {
+        isLoading = false;
+      });
     });
 
     super.initState();
