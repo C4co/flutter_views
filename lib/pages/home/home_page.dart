@@ -10,6 +10,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> with RouteAware {
+  bool isLoading = false;
+
   @override
   void initState() {
     super.initState();
@@ -30,38 +32,78 @@ class _HomePageState extends State<HomePage> with RouteAware {
 
   @override
   void didPopNext() {
+    setState(() {
+      isLoading = true;
+    });
+
+    Future.delayed(const Duration(milliseconds: 600), () {
+      setState(() {
+        isLoading = false;
+      });
+    });
+
     themeGlobal.setTheme('defaultTheme');
   }
 
   @override
   Widget build(BuildContext context) {
+    if (isLoading) {
+      return Scaffold(
+        appBar: AppBar(),
+        body: const Center(
+          child: CircularProgressIndicator(
+            strokeWidth: 2,
+          ),
+        ),
+      );
+    }
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Flutter Views'),
+        centerTitle: true,
+        title: const Text(
+          'FLUTTER VIEWS',
+          style: TextStyle(
+            fontSize: 12,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 3,
+          ),
+        ),
       ),
       body: ListView(
         children: [
           ListTile(
             title: const Text(
-              'Autentication - EX 1',
+              'Authentication',
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             leading: const Icon(Icons.login),
             subtitle:
                 const Text('Full Material Design: login, register, recover'),
             onTap: () {
-              Navigator.pushNamed(context, '/auth_ex_1');
+              Navigator.pushNamed(context, '/auth');
             },
           ),
           ListTile(
             title: const Text(
-              'Profile page - EX 1',
+              'Buyer profile',
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             leading: const Icon(Icons.person_2_outlined),
             subtitle: const Text('Private profile'),
             onTap: () {
-              Navigator.pushNamed(context, '/profile_ex_1');
+              Navigator.pushNamed(context, '/buyer_profile');
+            },
+          ),
+          ListTile(
+            title: const Text(
+              'Crypto dashboard',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            leading: const Icon(Icons.dashboard_outlined),
+            subtitle: const Text('List coins and details'),
+            onTap: () {
+              Navigator.pushNamed(context, '/crypto_dashboard');
             },
           )
         ],

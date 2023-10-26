@@ -70,8 +70,30 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - ./assets/images/welcome.png
-    - ./lib/modules/auth_ex_1/assets/logo.png
+    - ./lib/modules/auth/assets/logo.png
+
+    - ./lib/modules/buyer_profile/assets/profile.jpg
+
+    - ./lib/modules/crypto_dashboard/assets/BNB.png
+    - ./lib/modules/crypto_dashboard/assets/BTC.png
+    - ./lib/modules/crypto_dashboard/assets/DASH.png
+    - ./lib/modules/crypto_dashboard/assets/DOGE.png
+    - ./lib/modules/crypto_dashboard/assets/LINK.png
+    - ./lib/modules/crypto_dashboard/assets/MUE.png
+    - ./lib/modules/crypto_dashboard/assets/NAV.png
+    - ./lib/modules/crypto_dashboard/assets/RADS.png
+    - ./lib/modules/crypto_dashboard/assets/XLM.png
+    - ./lib/modules/crypto_dashboard/assets/XLQ.png
+    - ./lib/modules/crypto_dashboard/assets/XRM.png
+    - ./lib/modules/crypto_dashboard/assets/ZIL.png
+    - ./lib/modules/crypto_dashboard/assets/XCP.png
+    - ./lib/modules/crypto_dashboard/assets/ECA.png
+    - ./lib/modules/crypto_dashboard/assets/FLASH.png
+    - ./lib/modules/crypto_dashboard/assets/HPC.png
+    - ./lib/modules/crypto_dashboard/assets/PAC.png
+    - ./lib/modules/crypto_dashboard/assets/POWR.png
+    - ./lib/modules/crypto_dashboard/assets/SINS.png
+    - ./lib/modules/crypto_dashboard/assets/TMC.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -1,17 +1,26 @@
 import 'package:flutter/material.dart';
 
-profileEx1theme() => ThemeData(
+cryptoDashboardTheme() => ThemeData(
       useMaterial3: true,
-      brightness: Brightness.light,
-      colorSchemeSeed: Colors.green,
+      brightness: Brightness.dark,
+      colorSchemeSeed: Colors.yellow,
       fontFamily: 'SFProDisplay',
+      chipTheme: const ChipThemeData(
+        shape: StadiumBorder(),
+        side: BorderSide(
+          color: Colors.transparent,
+          width: 1,
+        ),
+        labelStyle: TextStyle(
+          fontSize: 12,
+        ),
+      ),
       appBarTheme: const AppBarTheme(
         elevation: 0,
         titleTextStyle: TextStyle(
           color: Colors.white,
-          fontSize: 12,
-          letterSpacing: 8,
-          fontWeight: FontWeight.w600,
+          fontSize: 18,
+          fontWeight: FontWeight.w700,
         ),
         //actions white
         actionsIconTheme: IconThemeData(

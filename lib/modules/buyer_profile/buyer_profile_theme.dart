@@ -1,26 +1,20 @@
 import 'package:flutter/material.dart';
 
-dashboard01theme() => ThemeData(
+buyerProfileTheme() => ThemeData(
       useMaterial3: true,
-      brightness: Brightness.dark,
-      colorSchemeSeed: Colors.yellow,
+      brightness: Brightness.light,
+      colorSchemeSeed: Colors.red,
       fontFamily: 'SFProDisplay',
-      chipTheme: const ChipThemeData(
-        shape: StadiumBorder(),
-        side: BorderSide(
-          color: Colors.transparent,
-          width: 1,
-        ),
-        labelStyle: TextStyle(
-          fontSize: 12,
-        ),
+      listTileTheme: ListTileThemeData(
+        iconColor: Colors.red.shade800,
       ),
       appBarTheme: const AppBarTheme(
         elevation: 0,
         titleTextStyle: TextStyle(
           color: Colors.white,
-          fontSize: 18,
-          fontWeight: FontWeight.w700,
+          fontSize: 12,
+          letterSpacing: 8,
+          fontWeight: FontWeight.w600,
         ),
         //actions white
         actionsIconTheme: IconThemeData(

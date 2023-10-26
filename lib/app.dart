@@ -9,15 +9,18 @@ class ObserverUtils {
 class App extends StatelessWidget {
   const App({super.key});
 
-  ThemeData showTheme(String t) {
-    if (t == 'defaultTheme') {
-      return defaultTheme();
-    } else if (t == 'authEx1theme') {
-      return authEx1theme();
-    } else if (t == 'profileEx1Theme') {
-      return profileEx1theme();
-    } else {
-      return defaultTheme();
+  ThemeData showTheme(String theme) {
+    switch (theme) {
+      case 'defaultTheme':
+        return defaultTheme();
+      case 'authTheme':
+        return authTheme();
+      case 'buyerProfileTheme':
+        return buyerProfileTheme();
+      case 'cryptoDashboardTheme':
+        return cryptoDashboardTheme();
+      default:
+        return defaultTheme();
     }
   }
 
@@ -31,8 +34,9 @@ class App extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           home: const HomePage(),
           routes: {
-            '/auth_ex_1': (context) => const AuthEx1(),
-            '/profile_ex_1': (context) => const ProfileEx1(),
+            '/auth': (context) => const AuthPage(),
+            '/buyer_profile': (context) => const BuyerProfilePage(),
+            '/crypto_dashboard': (context) => const CryptoDashboardPage(),
           },
           navigatorObservers: [ObserverUtils.routeObserver],
         );

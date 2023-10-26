@@ -1,18 +1,26 @@
 import 'package:flutter/material.dart';
 import '/imports/app.dart';
 
-class ProfileEx1 extends StatefulWidget {
-  const ProfileEx1({super.key});
+class BuyerProfilePage extends StatefulWidget {
+  const BuyerProfilePage({super.key});
 
   @override
-  State<ProfileEx1> createState() => _ProfileEx1State();
+  State<BuyerProfilePage> createState() => _BuyerProfilePageState();
 }
 
-class _ProfileEx1State extends State<ProfileEx1> {
+class _BuyerProfilePageState extends State<BuyerProfilePage> {
+  bool isLoading = true;
+
   @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      themeGlobal.setTheme('profileEx1Theme');
+      themeGlobal.setTheme('buyerProfileTheme');
+    });
+
+    Future.delayed(const Duration(milliseconds: 600), () {
+      setState(() {
+        isLoading = false;
+      });
     });
 
     super.initState();
@@ -20,6 +28,17 @@ class _ProfileEx1State extends State<ProfileEx1> {
 
   @override
   Widget build(BuildContext context) {
+    if (isLoading) {
+      return Scaffold(
+        appBar: AppBar(),
+        body: const Center(
+          child: CircularProgressIndicator(
+            strokeWidth: 2,
+          ),
+        ),
+      );
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Profile'.toUpperCase()),
@@ -61,8 +80,8 @@ class _ProfileEx1State extends State<ProfileEx1> {
                       borderRadius: BorderRadius.circular(100),
                     ),
                     //network image
-                    child: Image.network(
-                      'https://userstock.io/data/wp-content/uploads/2020/06/women-s-white-and-black-button-up-collared-shirt-774909-2-1024x1024.jpg',
+                    child: Image.asset(
+                      './lib/modules/buyer_profile/assets/profile.jpg',
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -82,7 +101,7 @@ class _ProfileEx1State extends State<ProfileEx1> {
                           ),
                         ),
                         Text(
-                          'UI/UX Designer',
+                          'janne@gmail.com',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 12,
@@ -106,6 +125,7 @@ class _ProfileEx1State extends State<ProfileEx1> {
                           onPressed: () {},
                           icon: Icon(
                             Icons.description_outlined,
+                            size: 20,
                             color: Theme.of(context).colorScheme.onPrimary,
                           ),
                         ),
@@ -123,6 +143,7 @@ class _ProfileEx1State extends State<ProfileEx1> {
                           onPressed: () {},
                           icon: Icon(
                             Icons.edit,
+                            size: 20,
                             color: Theme.of(context).colorScheme.onPrimary,
                           ),
                         ),
@@ -155,11 +176,10 @@ class _ProfileEx1State extends State<ProfileEx1> {
                   vertical: 15,
                 ),
                 child: Column(
-                  //start
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
                           'WALLET:',
@@ -169,9 +189,9 @@ class _ProfileEx1State extends State<ProfileEx1> {
                             fontWeight: FontWeight.w700,
                           ),
                         ),
-                        const SizedBox(height: 5),
+                        const SizedBox(width: 10),
                         const Text(
-                          '\$ 500,000,000',
+                          '\$ 12.360',
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: 22,
@@ -180,16 +200,12 @@ class _ProfileEx1State extends State<ProfileEx1> {
                         ),
                       ],
                     ),
-
-                    // horizontal line
                     Container(
                       height: 1,
                       width: double.infinity,
                       color: Colors.grey[300],
                       margin: const EdgeInsets.symmetric(vertical: 10),
                     ),
-
-                    //order
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -206,7 +222,7 @@ class _ProfileEx1State extends State<ProfileEx1> {
                           '12',
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 20,
+                            fontSize: 22,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
@@ -225,7 +241,7 @@ class _ProfileEx1State extends State<ProfileEx1> {
                 vertical: 0,
               ),
               leading: const Icon(Icons.favorite_border_outlined),
-              title: const Text('Your Favorites'),
+              title: const Text('Favorites'),
               trailing: const Icon(Icons.chevron_right),
             ),
 
@@ -235,8 +251,14 @@ class _ProfileEx1State extends State<ProfileEx1> {
                 horizontal: 15,
                 vertical: 0,
               ),
-              leading: const Icon(Icons.grid_view_outlined),
-              title: const Text('My Products'),
+              leading: const Icon(Icons.list),
+              title: const Text('Wishlist'),
+              subtitle: Text(
+                '12 items',
+                style: TextStyle(
+                  color: Colors.blue.shade800,
+                ),
+              ),
               trailing: const Icon(Icons.chevron_right),
             ),
 
@@ -257,8 +279,8 @@ class _ProfileEx1State extends State<ProfileEx1> {
                 horizontal: 15,
                 vertical: 0,
               ),
-              leading: const Icon(Icons.people_outline_outlined),
-              title: const Text('Tell your friends'),
+              leading: const Icon(Icons.pin_drop_outlined),
+              title: const Text('Addresses'),
               trailing: const Icon(Icons.chevron_right),
             ),
 
@@ -292,39 +314,55 @@ class _ProfileEx1State extends State<ProfileEx1> {
               ),
               width: double.infinity,
               decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
-                //border gray
-                border: Border.all(
-                  color: Colors.black.withOpacity(0.2),
-                  width: 1,
+                borderRadius: BorderRadius.circular(10),
+                gradient: const LinearGradient(
+                  colors: [
+                    Color.fromARGB(255, 205, 0, 0),
+                    Color.fromARGB(255, 240, 189, 23),
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
                 ),
               ),
               margin: const EdgeInsets.symmetric(
                 horizontal: 15,
                 vertical: 15,
               ),
-              child: Column(
-                //start
-                crossAxisAlignment: CrossAxisAlignment.start,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    'PROMOTION:',
-                    style: TextStyle(
-                      color: Colors.grey[600],
-                      fontSize: 12,
-                      fontWeight: FontWeight.w700,
+                  const Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          '🟡 PROMOTION:',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
+                            letterSpacing: 3,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                        SizedBox(height: 5),
+                        Text(
+                          'Free shipping for orders over \$ 100',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                  const SizedBox(height: 5),
-                  const Text(
-                    'Free shipping for orders over \$ 100',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w700,
+                  FilledButton(
+                    onPressed: () {},
+                    child: const Text(
+                      "Shop Now",
+                      style: TextStyle(fontSize: 12),
                     ),
-                  ),
+                  )
                 ],
               ),
             ),
