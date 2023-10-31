@@ -3,11 +3,8 @@ import 'package:flutter/material.dart';
 buyerProfileTheme() => ThemeData(
       useMaterial3: true,
       brightness: Brightness.light,
-      colorSchemeSeed: Colors.red,
+      colorSchemeSeed: const Color.fromARGB(255, 24, 68, 242),
       fontFamily: 'SFProDisplay',
-      listTileTheme: ListTileThemeData(
-        iconColor: Colors.red.shade800,
-      ),
       appBarTheme: const AppBarTheme(
         elevation: 0,
         titleTextStyle: TextStyle(
