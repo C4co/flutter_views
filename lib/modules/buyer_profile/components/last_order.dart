@@ -21,7 +21,7 @@ class LastOrder extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
         //border gray
         border: Border.all(
-          color: Colors.black.withOpacity(0.2),
+          color: Theme.of(context).colorScheme.primary.withOpacity(0.3),
           width: 1,
         ),
       ),

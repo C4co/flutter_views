@@ -36,7 +36,7 @@ class Product extends StatelessWidget {
       title: Text(
         name,
         style: const TextStyle(
-          fontSize: 16,
+          fontSize: 14,
         ),
       ),
       subtitle: Text(

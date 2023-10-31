@@ -9,7 +9,7 @@ class TrackingButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: FilledButton.tonal(
+      child: OutlinedButton(
         child: const Text(
           'TRACKING',
           style: TextStyle(
