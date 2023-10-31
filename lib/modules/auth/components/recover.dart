@@ -24,10 +24,10 @@ class Recover extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Recover Password",
+                            "Recover password",
                             style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
+                              fontSize: 26,
+                              fontWeight: FontWeight.w400,
                             ),
                           ),
                           Text("Enter your email to recover your password")

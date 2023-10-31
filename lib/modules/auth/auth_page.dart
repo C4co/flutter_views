@@ -68,8 +68,8 @@ class _AuthPageState extends State<AuthPage> {
                       const Text(
                         "Welcome!",
                         style: TextStyle(
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold,
+                          fontSize: 42,
+                          fontWeight: FontWeight.w400,
                         ),
                       ),
                       const Text("Do login to continue"),

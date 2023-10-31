@@ -24,10 +24,10 @@ class Register extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Register",
+                            "New account",
                             style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
+                              fontSize: 26,
+                              fontWeight: FontWeight.w400,
                             ),
                           ),
                           Text("Create a new account")
@@ -92,7 +92,7 @@ class Register extends StatelessWidget {
           },
         );
       },
-      child: const Text('Create an account'),
+      child: const Text('Send email'),
     );
   }
 }
