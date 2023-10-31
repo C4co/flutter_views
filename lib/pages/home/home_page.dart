@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage> with RouteAware {
         title: const Text(
           'FLUTTER VIEWS',
           style: TextStyle(
-            fontSize: 12,
+            fontSize: 14,
             fontWeight: FontWeight.bold,
             letterSpacing: 3,
           ),
@@ -75,7 +75,7 @@ class _HomePageState extends State<HomePage> with RouteAware {
           ListTile(
             title: const Text(
               'Authentication',
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 18),
             ),
             leading: const Icon(Icons.login),
             subtitle:
@@ -87,7 +87,7 @@ class _HomePageState extends State<HomePage> with RouteAware {
           ListTile(
             title: const Text(
               'Buyer profile',
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 18),
             ),
             leading: const Icon(Icons.person_2_outlined),
             subtitle: const Text('Private profile'),
@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage> with RouteAware {
           ListTile(
             title: const Text(
               'Crypto dashboard',
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 18),
             ),
             leading: const Icon(Icons.dashboard_outlined),
             subtitle: const Text('List coins and details'),
