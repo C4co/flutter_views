@@ -66,7 +66,7 @@ class _AuthPageState extends State<AuthPage> {
                       const SizedBox(height: 20),
 
                       const Text(
-                        "Welcome!",
+                        "Welcome.",
                         style: TextStyle(
                           fontSize: 42,
                           fontWeight: FontWeight.w400,
