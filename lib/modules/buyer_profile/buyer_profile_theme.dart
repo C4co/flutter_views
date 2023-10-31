@@ -5,6 +5,7 @@ buyerProfileTheme() => ThemeData(
       brightness: Brightness.light,
       colorSchemeSeed: const Color.fromARGB(255, 24, 68, 242),
       fontFamily: 'SFProDisplay',
+      scaffoldBackgroundColor: Colors.white,
       appBarTheme: const AppBarTheme(
         elevation: 0,
         titleTextStyle: TextStyle(
