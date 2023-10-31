@@ -58,7 +58,7 @@ class Content extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 40),
+          const SizedBox(height: 20),
           TextFormField(
             decoration: const InputDecoration(
               labelText: 'Email',
