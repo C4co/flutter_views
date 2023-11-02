@@ -9,14 +9,9 @@ class TrackingButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: OutlinedButton(
+      child: FilledButton(
         child: const Text(
-          'TRACKING',
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 12,
-            fontWeight: FontWeight.w700,
-          ),
+          'Tracking',
         ),
         onPressed: () {
           showModalBottomSheet(
@@ -36,51 +31,33 @@ class TrackingButton extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          const ListTile(
-                            leading: Icon(Icons.shopping_bag_outlined),
-                            title: Text(
-                              'Order Placed',
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                            subtitle: Text('Your order has been placed'),
+                          const TrackItem(
+                            icon: Icons.shopping_bag_outlined,
+                            title: 'Order placed',
+                            subtitle: 'Your order has been placed',
                           ),
-                          const ListTile(
-                            leading: Icon(Icons.send),
-                            title: Text(
-                              'Dispatch in progress',
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                            subtitle: Text(
-                              'Your order is being prepared for dispatch',
-                            ),
+                          const TrackItem(
+                            icon: Icons.send_outlined,
+                            title: 'Dispatch in progress',
+                            subtitle:
+                                'Your order is being prepared for dispatch',
                           ),
-                          const ListTile(
-                            leading: Icon(Icons.archive),
-                            title: Text(
-                              'Ready to dispatch',
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                            subtitle: Text(
-                              'Your order is ready to be dispatched',
-                            ),
+                          const TrackItem(
+                            icon: Icons.archive,
+                            title: 'Ready to dispatch',
+                            subtitle: 'Your order is ready to be dispatched',
                           ),
-                          const ListTile(
-                            leading: Icon(Icons.delivery_dining),
-                            title: Text(
-                              'In transit',
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                            subtitle: Text('Your order is on the way'),
+                          const TrackItem(
+                            icon: Icons.delivery_dining,
+                            title: 'In transit',
+                            subtitle: 'Your order is on the way',
                           ),
                           Container(
                             color: Colors.green.shade100,
-                            child: const ListTile(
-                              leading: Icon(Icons.check),
-                              title: Text(
-                                'Delivered',
-                                style: TextStyle(fontWeight: FontWeight.bold),
-                              ),
-                              subtitle: Text('Your order has been delivered'),
+                            child: const TrackItem(
+                              icon: Icons.check,
+                              title: 'Devilered',
+                              subtitle: 'Your order has been delivered',
                             ),
                           ),
                         ],
@@ -97,20 +74,30 @@ class TrackingButton extends StatelessWidget {
   }
 }
 
-class VerticalDivider extends StatelessWidget {
-  const VerticalDivider({
+class TrackItem extends StatelessWidget {
+  final IconData? icon;
+  final String title;
+  final String subtitle;
+
+  const TrackItem({
     super.key,
+    required this.icon,
+    required this.title,
+    required this.subtitle,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.symmetric(
-        horizontal: 28,
+    return ListTile(
+      leading: Icon(icon),
+      title: Text(
+        title,
+        style: const TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: 14,
+        ),
       ),
-      width: 1,
-      height: 20,
-      color: Theme.of(context).colorScheme.primary,
+      subtitle: Text(subtitle),
     );
   }
 }

@@ -11,6 +11,11 @@ buyerProfileTheme() => ThemeData(
         elevation: 0,
         surfaceTintColor: Colors.white,
         modalBackgroundColor: Colors.white,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            top: Radius.circular(0),
+          ),
+        ),
       ),
       appBarTheme: const AppBarTheme(
         elevation: 0,

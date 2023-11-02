@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter/modules/buyer_profile/components/modal_title.dart';
-import 'package:flutter_starter/modules/buyer_profile/components/product.dart';
+import 'modal_title.dart';
+import 'product.dart';
 
 class DetailsButton extends StatelessWidget {
   const DetailsButton({
@@ -10,14 +10,9 @@ class DetailsButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: OutlinedButton(
+      child: FilledButton(
         child: const Text(
-          'ORDER DETAIL',
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 12,
-            fontWeight: FontWeight.w700,
-          ),
+          'Order Details',
         ),
         onPressed: () {
           showModalBottomSheet(
