@@ -17,7 +17,7 @@ class Register extends StatelessWidget {
           },
         );
       },
-      child: const Text('Send email'),
+      child: const Text('Create a new account'),
     );
   }
 }
