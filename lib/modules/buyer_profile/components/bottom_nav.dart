@@ -14,16 +14,12 @@ class BottomNav extends StatelessWidget {
       ),
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.primary.withOpacity(0.1),
-        borderRadius: BorderRadius.circular(100),
-        border: Border.all(
-          color: Theme.of(context).colorScheme.primary.withOpacity(0.4),
-          width: 1,
+        border: Border(
+          top: BorderSide(
+            color: Theme.of(context).colorScheme.outlineVariant,
+            width: 1,
+          ),
         ),
-      ),
-      margin: const EdgeInsets.symmetric(
-        horizontal: 15,
-        vertical: 15,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
