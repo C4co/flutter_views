@@ -38,37 +38,48 @@ class TrackingButton extends StatelessWidget {
                         children: [
                           const ListTile(
                             leading: Icon(Icons.shopping_bag_outlined),
-                            title: Text('Order Placed'),
+                            title: Text(
+                              'Order Placed',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
                             subtitle: Text('Your order has been placed'),
                           ),
-                          const VerticalDivider(),
                           const ListTile(
                             leading: Icon(Icons.send),
-                            title: Text('Dispatch in progress'),
+                            title: Text(
+                              'Dispatch in progress',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
                             subtitle: Text(
                               'Your order is being prepared for dispatch',
                             ),
                           ),
-                          const VerticalDivider(),
                           const ListTile(
                             leading: Icon(Icons.archive),
-                            title: Text('Ready to dispatch'),
+                            title: Text(
+                              'Ready to dispatch',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
                             subtitle: Text(
-                              ' Your order is ready to be dispatched',
+                              'Your order is ready to be dispatched',
                             ),
                           ),
-                          const VerticalDivider(),
                           const ListTile(
                             leading: Icon(Icons.delivery_dining),
-                            title: Text('In transit'),
+                            title: Text(
+                              'In transit',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
                             subtitle: Text('Your order is on the way'),
                           ),
-                          const VerticalDivider(),
                           Container(
                             color: Colors.green.shade100,
                             child: const ListTile(
                               leading: Icon(Icons.check),
-                              title: Text('Delivered'),
+                              title: Text(
+                                'Delivered',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
                               subtitle: Text('Your order has been delivered'),
                             ),
                           ),

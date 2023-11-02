@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter/imports/app.dart';
 
 class ProfileHeader extends StatelessWidget {
   const ProfileHeader({
@@ -11,9 +10,6 @@ class ProfileHeader extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(15),
       width: double.infinity,
-      decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.primary.darken(0.08),
-      ),
       child: Row(
         children: [
           Container(
@@ -38,15 +34,13 @@ class ProfileHeader extends StatelessWidget {
                 Text(
                   'Jane Doe',
                   style: TextStyle(
-                    color: Colors.white,
                     fontSize: 18,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w700,
                   ),
                 ),
                 Text(
                   '1234 Main St - New York, NY',
                   style: TextStyle(
-                    color: Colors.white,
                     fontSize: 12,
                     fontWeight: FontWeight.w400,
                   ),
@@ -56,39 +50,19 @@ class ProfileHeader extends StatelessWidget {
           ),
           Row(
             children: [
-              Container(
-                height: 40,
-                width: 40,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(0.3),
-                  borderRadius: BorderRadius.circular(100),
-                ),
-                child: IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.description_outlined,
-                    size: 20,
-                    color: Theme.of(context).colorScheme.onPrimary,
-                  ),
+              IconButton.filledTonal(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.description_outlined,
+                  size: 20,
                 ),
               ),
-              const SizedBox(width: 15),
-              Container(
-                height: 40,
-                width: 40,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(0.3),
-                  borderRadius: BorderRadius.circular(100),
-                ),
-                child: IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.edit,
-                    size: 20,
-                    color: Theme.of(context).colorScheme.onPrimary,
-                  ),
+              const SizedBox(width: 5),
+              IconButton.filledTonal(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.edit,
+                  size: 20,
                 ),
               ),
             ],

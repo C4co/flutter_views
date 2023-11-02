@@ -49,7 +49,6 @@ class _BuyerProfilePageState extends State<BuyerProfilePage> {
       appBar: AppBar(
         title: Text('Profile'.toUpperCase()),
         elevation: 0,
-        backgroundColor: Theme.of(context).colorScheme.primary,
         actions: [
           IconButton(
             onPressed: () {},

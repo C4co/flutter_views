@@ -6,20 +6,20 @@ buyerProfileTheme() => ThemeData(
       colorSchemeSeed: const Color.fromARGB(255, 24, 68, 242),
       fontFamily: 'SFProDisplay',
       scaffoldBackgroundColor: Colors.white,
+      bottomSheetTheme: const BottomSheetThemeData(
+        backgroundColor: Colors.white,
+        elevation: 0,
+        surfaceTintColor: Colors.white,
+        modalBackgroundColor: Colors.white,
+      ),
       appBarTheme: const AppBarTheme(
         elevation: 0,
+        backgroundColor: Colors.white,
         titleTextStyle: TextStyle(
-          color: Colors.white,
-          fontSize: 12,
+          fontSize: 14,
           letterSpacing: 8,
-          fontWeight: FontWeight.w600,
-        ),
-        //actions white
-        actionsIconTheme: IconThemeData(
-          color: Colors.white,
-        ),
-        iconTheme: IconThemeData(
-          color: Colors.white,
+          fontWeight: FontWeight.w900,
+          color: Colors.black,
         ),
       ),
     );

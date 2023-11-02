@@ -37,14 +37,13 @@ class Product extends StatelessWidget {
         name,
         style: const TextStyle(
           fontSize: 14,
+          fontWeight: FontWeight.bold,
         ),
       ),
       subtitle: Text(
         detail,
-        style: TextStyle(
-          fontSize: 12,
-          fontWeight: FontWeight.bold,
-          color: Theme.of(context).colorScheme.primary,
+        style: const TextStyle(
+          fontSize: 14,
         ),
       ),
       trailing: Text(

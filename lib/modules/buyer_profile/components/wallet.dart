@@ -19,7 +19,7 @@ class Wallet extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           //border gray
           border: Border.all(
-            color: Theme.of(context).colorScheme.primary.withOpacity(0.3),
+            color: Theme.of(context).colorScheme.outlineVariant,
             width: 1,
           ),
         ),
