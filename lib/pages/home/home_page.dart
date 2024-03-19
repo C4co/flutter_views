@@ -78,8 +78,7 @@ class _HomePageState extends State<HomePage> with RouteAware {
               style: TextStyle(fontSize: 18),
             ),
             leading: const Icon(Icons.login),
-            subtitle:
-                const Text('Full Material Design: login, register, recover'),
+            subtitle: const Text('Full Material Design: login, register, recover'),
             onTap: () {
               Navigator.pushNamed(context, '/auth');
             },
@@ -105,7 +104,18 @@ class _HomePageState extends State<HomePage> with RouteAware {
             onTap: () {
               Navigator.pushNamed(context, '/crypto_dashboard');
             },
-          )
+          ),
+          ListTile(
+            title: const Text(
+              'Banking',
+              style: TextStyle(fontSize: 18),
+            ),
+            leading: const Icon(Icons.account_balance_outlined),
+            subtitle: const Text('Banking theme'),
+            onTap: () {
+              Navigator.pushNamed(context, '/banking');
+            },
+          ),
         ],
       ),
     );

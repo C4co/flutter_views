@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'imports/app.dart';
 
 class ObserverUtils {
-  static final RouteObserver<ModalRoute> routeObserver =
-      RouteObserver<ModalRoute>();
+  static final RouteObserver<ModalRoute> routeObserver = RouteObserver<ModalRoute>();
 }
 
 class App extends StatelessWidget {
@@ -19,6 +18,8 @@ class App extends StatelessWidget {
         return buyerProfileTheme();
       case 'cryptoDashboardTheme':
         return cryptoDashboardTheme();
+      case 'bankingTheme':
+        return bankingTheme();
       default:
         return defaultTheme();
     }
@@ -37,6 +38,7 @@ class App extends StatelessWidget {
             '/auth': (context) => const AuthPage(),
             '/buyer_profile': (context) => const BuyerProfilePage(),
             '/crypto_dashboard': (context) => const CryptoDashboardPage(),
+            '/banking': (context) => const BankingPage(),
           },
           navigatorObservers: [ObserverUtils.routeObserver],
         );

@@ -6,3 +6,6 @@ export 'buyer_profile/buyer_profile_theme.dart';
 
 export 'crypto_dashboard/crypto_dashboard_page.dart';
 export 'crypto_dashboard/crypto_dashboard_theme.dart';
+
+export 'banking/banking_page.dart';
+export 'banking/banking_theme.dart';

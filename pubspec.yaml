@@ -40,6 +40,11 @@ dependencies:
   json_annotation: ^4.8.1
   font_awesome_flutter: ^10.6.0
   shared_preferences: ^2.2.0
+  vw:
+    git:
+      url: https://github.com/C4co/vw.git
+  google_fonts: ^4.0.4
+  fluentui_system_icons: ^1.1.231
 
 dev_dependencies:
   flutter_test:
@@ -73,6 +78,9 @@ flutter:
     - ./lib/modules/auth/assets/logo.png
 
     - ./lib/modules/buyer_profile/assets/profile.jpg
+
+    - ./lib/modules/banking/assets/chip.png
+    - ./lib/modules/banking/assets/master.png
 
     - ./lib/modules/crypto_dashboard/assets/BNB.png
     - ./lib/modules/crypto_dashboard/assets/BTC.png
