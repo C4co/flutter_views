@@ -13,7 +13,7 @@ class BankPanel extends StatelessWidget {
   Widget build(BuildContext context) {
     return VWBox(
       padding: const EdgeInsets.only(
-        top: 70,
+        top: 50,
         left: 20,
         right: 20,
         bottom: 40,
@@ -24,7 +24,7 @@ class BankPanel extends StatelessWidget {
         colors: [
           Colors.green.shade200,
           Colors.green.shade200,
-          Colors.green.shade400,
+          Colors.green.shade600,
         ],
       ),
       borderRadius: const BorderRadius.only(

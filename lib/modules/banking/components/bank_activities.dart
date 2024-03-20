@@ -63,7 +63,7 @@ class BankActivities extends StatelessWidget {
                   child: ListView(
                     children: const [
                       ActivityItem(
-                        title: 'Receive',
+                        title: 'Received',
                         price: '\$200',
                         isPositive: true,
                         icon: FluentIcons.arrow_down_20_regular,
@@ -76,32 +76,32 @@ class BankActivities extends StatelessWidget {
                         date: '18/07/2024 - 19:39:49',
                       ),
                       ActivityItem(
-                        title: 'Receive',
-                        price: '\$200',
+                        title: 'Received',
+                        price: '\$340',
                         isPositive: true,
                         icon: FluentIcons.arrow_down_20_regular,
                         date: '17/04/2024 - 17:32:05',
                       ),
                       ActivityItem(
                         title: 'Steam',
-                        price: '-\$100',
+                        price: '-\$60',
                         icon: FluentIcons.games_16_regular,
                         date: '17/10/2024 - 01:07:02',
                       ),
                       ActivityItem(
                         title: 'Wallmart',
-                        price: '-\$100',
+                        price: '-\$98',
                         icon: FluentIcons.money_20_regular,
                         date: '06/11/2024 - 20:40:26',
                       ),
                       ActivityItem(
                         title: 'Send',
-                        price: '-\$100',
+                        price: '-\$320',
                         icon: FluentIcons.arrow_up_20_regular,
                         date: '22/07/2024 - 13:14:07',
                       ),
                       ActivityItem(
-                        title: 'Receive',
+                        title: 'Received',
                         price: '\$200',
                         isPositive: true,
                         icon: FluentIcons.arrow_down_20_regular,
@@ -109,25 +109,25 @@ class BankActivities extends StatelessWidget {
                       ),
                       ActivityItem(
                         title: 'Paypal',
-                        price: '-\$100',
+                        price: '-\$93.4',
                         icon: FluentIcons.money_20_regular,
                         date: '13/06/2024 - 01:38:36',
                       ),
                       ActivityItem(
                         title: 'Ebay',
-                        price: '-\$100',
+                        price: '-\$112',
                         icon: FluentIcons.money_20_regular,
                         date: '24/02/2024 - 00:54:26',
                       ),
                       ActivityItem(
                         title: 'Amazon',
-                        price: '-\$100',
+                        price: '-\$14',
                         icon: FluentIcons.money_20_regular,
                         date: '29/09/2024 - 23:03:31',
                       ),
                       ActivityItem(
                         title: 'Steam',
-                        price: '-\$100',
+                        price: '-\$25',
                         icon: FluentIcons.games_16_regular,
                         date: '29/04/2024 - 19:54:05',
                       ),
@@ -200,11 +200,11 @@ class ActivityItem extends StatelessWidget {
           horizontal: 10,
           vertical: 5,
         ),
-        color: isPositive ? Colors.green : const Color.fromARGB(255, 255, 85, 73),
+        color: isPositive ? const Color.fromARGB(255, 255, 255, 255) : const Color.fromARGB(157, 0, 0, 0),
         child: Text(
           price,
-          style: const TextStyle(
-            color: Colors.white,
+          style: TextStyle(
+            color: isPositive ? Colors.green.shade800 : Colors.red.shade400,
             fontWeight: FontWeight.bold,
             fontSize: 13,
           ),

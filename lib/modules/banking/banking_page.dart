@@ -1,7 +1,7 @@
-import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_starter/modules/banking/components/bank_activities.dart';
+import 'components/bank_activities.dart';
+import 'components/bank_promotion.dart';
 import 'components/bank_panel.dart';
 import 'components/bank_card.dart';
 import 'components/bank_service.dart';
@@ -53,58 +53,22 @@ class _BankingPageState extends State<BankingPage> {
       );
     }
 
-    return Scaffold(
+    return const Scaffold(
       extendBody: true,
       body: SingleChildScrollView(
         child: VWColumn(
           gap: 10,
           children: [
-            const BankPanel(),
+            BankPanel(),
             VWColumn(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
+              padding: EdgeInsets.symmetric(horizontal: 10),
               gap: 10,
               children: [
-                const BankServices(),
-                const BankCard(),
-                VWBox(
-                  width: double.infinity,
-                  padding: const EdgeInsets.all(20),
-                  borderRadius: const BorderRadius.all(
-                    Radius.circular(20),
-                  ),
-                  color: Colors.green[200],
-                  child: VWRow(
-                    verticalAlignment: CrossAxisAlignment.center,
-                    gap: 20,
-                    children: [
-                      Icon(
-                        size: 40,
-                        FluentIcons.star_20_filled,
-                        color: Colors.green[900],
-                      ),
-                      const VWColumn(
-                        gap: 5,
-                        children: [
-                          Text(
-                            'Promotion',
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Text(
-                            'Get 10% cashback on your first transaction',
-                            style: TextStyle(
-                              fontSize: 14,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                const BankCrypto(),
-                const SizedBox(
+                BankServices(),
+                BankCard(),
+                BankCrypto(),
+                BankPromotion(),
+                SizedBox(
                   height: 50,
                 )
               ],
@@ -112,7 +76,7 @@ class _BankingPageState extends State<BankingPage> {
           ],
         ),
       ),
-      bottomNavigationBar: const BankActivities(),
+      bottomNavigationBar: BankActivities(),
     );
   }
 }
