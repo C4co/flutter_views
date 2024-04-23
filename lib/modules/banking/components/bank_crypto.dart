@@ -18,8 +18,18 @@ class BankCrypto extends StatelessWidget {
       ),
       color: Colors.green[200],
       child: const VWColumn(
-        gap: 10,
+        gap: 15,
+        horizontalAlignment: CrossAxisAlignment.center,
         children: [
+          Text(
+            "CRYPTO",
+            style: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 5,
+            ),
+            textAlign: TextAlign.center,
+          ),
           VWRow(
             horizontalAlignment: MainAxisAlignment.spaceBetween,
             children: [

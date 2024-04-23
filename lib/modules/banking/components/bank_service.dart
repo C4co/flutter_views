@@ -18,8 +18,18 @@ class BankServices extends StatelessWidget {
       ),
       color: Colors.green[200],
       child: const VWColumn(
-        gap: 10,
+        horizontalAlignment: CrossAxisAlignment.center,
+        gap: 15,
         children: [
+          Text(
+            "SERVICES",
+            style: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 5,
+            ),
+            textAlign: TextAlign.center,
+          ),
           VWRow(
             horizontalAlignment: MainAxisAlignment.spaceBetween,
             children: [

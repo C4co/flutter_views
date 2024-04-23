@@ -145,10 +145,6 @@ class BankActivities extends StatelessWidget {
           },
         );
       },
-      borderRadius: const BorderRadius.only(
-        topLeft: Radius.circular(20),
-        topRight: Radius.circular(20),
-      ),
       child: VWRow(
         horizontalAlignment: MainAxisAlignment.center,
         verticalAlignment: CrossAxisAlignment.center,
@@ -159,7 +155,7 @@ class BankActivities extends StatelessWidget {
             icon: const Icon(FluentIcons.money_16_regular),
           ),
           const Text(
-            'Recent activities (16)',
+            'Recent activities: 16',
             style: TextStyle(
               color: Colors.white,
               fontSize: 16,
@@ -204,7 +200,7 @@ class ActivityItem extends StatelessWidget {
         child: Text(
           price,
           style: TextStyle(
-            color: isPositive ? Colors.green.shade800 : Colors.red.shade400,
+            color: isPositive ? Colors.green.shade800 : Colors.red.shade200,
             fontWeight: FontWeight.bold,
             fontSize: 13,
           ),

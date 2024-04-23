@@ -28,8 +28,8 @@ class BankPanel extends StatelessWidget {
         ],
       ),
       borderRadius: const BorderRadius.only(
-        bottomLeft: Radius.circular(50),
-        bottomRight: Radius.circular(50),
+        bottomLeft: Radius.circular(20),
+        bottomRight: Radius.circular(20),
       ),
       width: double.infinity,
       child: VWColumn(

@@ -57,12 +57,12 @@ class _BankingPageState extends State<BankingPage> {
       extendBody: true,
       body: SingleChildScrollView(
         child: VWColumn(
-          gap: 10,
+          gap: 5,
           children: [
             BankPanel(),
             VWColumn(
-              padding: EdgeInsets.symmetric(horizontal: 10),
-              gap: 10,
+              padding: EdgeInsets.symmetric(horizontal: 5),
+              gap: 5,
               children: [
                 BankServices(),
                 BankCard(),
