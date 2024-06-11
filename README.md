@@ -10,4 +10,4 @@
 
 ## License
 
-MIT © [Carlos Costa](https://github.com/C4co)
+MIT © [Carlos Costa](https://github.com/carllosnc)
